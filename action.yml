@@ -10,10 +10,12 @@ runs:
   using: composite
   steps:
     - uses: bahmutov/npm-install@v1
+      name: Setup
       with:
         useLockFile: false
         working-directory: ${{ github.action_path }}
-    - run: >-
+    - name: Run Optic CI
+      run: >-
         node ${{ github.action_path }}/node_modules/@useoptic/optic-ci/build/index compare
         --from ${{ github.event.pull_request.base.sha }}:${{ inputs.file }}
         --to ${{ github.event.pull_request.head.sha }}:${{ inputs.file }}
