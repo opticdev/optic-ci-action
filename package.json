@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/opticdev/optic-ci-action#readme",
   "dependencies": {
-    "@useoptic/optic-ci": "^0.22.1"
+    "@useoptic/optic-ci": "latest"
   }
 }
